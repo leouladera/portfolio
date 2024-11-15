@@ -587,7 +587,7 @@ nav ul li:hover {
 }
 .first-line .img img {
   width: 30vw;
-  box-shadow: 0px 6px 93px 17px #12271fb9;
+  box-shadow: 0px 6px 93px 17px #7daff11f;
   border-radius: 8px;
   border: 1px solid #2e2e2e;
 }
@@ -626,9 +626,10 @@ nav ul li:hover {
 }
 .second-line .img img {
   width: 30vw;
-  box-shadow: 0px 6px 93px 17px #12271fb9;
+  box-shadow: 0px 6px 93px 17px #abacac0c;
   border-radius: 8px;
   border: 1px solid #2e2e2e;
+  transform: rotate(90deg);
 }
 .lines-3 {
   display: flex;

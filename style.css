@@ -8,6 +8,11 @@
 body {
   background-color: #212121;
 }
+::selection {
+  background-color: #f3f3f3;
+  color: rgb(22, 22, 22);
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -17,12 +22,13 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 2em;
+  gap: 2vw;
   justify-content: center;
   margin-top: 0.8rem;
   background-color: #3c3c3cef;
-  padding-block: 0.8rem;
-  width: 33vw;
+  padding-block: 1vw;
+  width: fit-content;
+  padding-inline: 2vw;
   /* margin-inline: 115%; */
   border-radius: 13px;
   border-top: 1px solid #cfcfcf42;
@@ -117,12 +123,12 @@ nav ul li:hover {
   transform: scale(1.1);
 }
 #hero .info .paragraph {
-  max-width: 40vw;
+  max-width: 45vw;
   font-size: 1.2em;
   text-align: right;
   color: #f3f3f3;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-optical-sizing: auto;
   line-height: 1.5em;
   letter-spacing: 1px;
@@ -195,11 +201,10 @@ nav ul li:hover {
   margin-top: 2vw;
   letter-spacing: 1px;
   line-height: 1.6vw;
-  font-weight: 350;
+  font-weight: 450;
 }
 .intro .see-more {
   text-align: center;
-
   margin-top: 5vw;
 }
 .see-more a {
@@ -252,7 +257,7 @@ nav ul li:hover {
   font-weight: 300;
   letter-spacing: 1px;
 }
-.interest {
+#interest {
   width: 95%;
   margin-top: 10vw;
   margin-inline: auto;
@@ -263,28 +268,31 @@ nav ul li:hover {
   box-shadow: 0px 0px 33px -4px rgba(255, 255, 255, 0.819);
   display: flex;
   gap: 8vw;
+  scroll-margin-top: 6vw;
 }
-.interest .display h1 {
-  font-size: 5rem;
+
+#interest .display h1 {
+  font-size: 6rem;
   width: 30vw;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: italic;
   font-weight: 450;
   letter-spacing: 1.3px;
+  text-transform: uppercase;
 }
-.interest .display p {
+#interest .display p {
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-weight: 1.1rem;
 }
-.interest .lists {
+#interest .lists {
   display: flex;
   gap: clamp(1vw, 2vw, 3vw);
   /* flex-wrap: wrap; */
 }
-.interest .lists li {
+#interest .lists li {
   font-family: "Plus Jakarta Sans", sans-serif;
   letter-spacing: 0.6px;
   font-weight: 600;
@@ -293,7 +301,7 @@ nav ul li:hover {
   text-transform: uppercase;
 }
 
-.interest .lists p {
+#interest .lists p {
   font-size: 1.1rem;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -301,8 +309,10 @@ nav ul li:hover {
   color: #5a5a5a;
   margin-top: 1vw;
   text-transform: capitalize;
-  min-width: 15vw;
+  min-width: 20vw;
+  letter-spacing: 0.5px;
   margin-left: 1.4vw;
+  line-height: 1.5vw;
 }
 #skills {
   padding-top: 10vw;
@@ -522,7 +532,7 @@ nav ul li:hover {
 }
 .awards-title {
   display: flex;
-  gap: 5vw;
+  gap: 10vw;
   align-items: center;
   padding-right: 5vw;
   padding-left: 4vw;
@@ -568,7 +578,9 @@ nav ul li:hover {
 }
 .first-line p {
   color: #c7c7c7;
-  font-family: "Oxygen Mono", monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 2vw;
+  font-weight: 300;
   margin-top: 2.3vw;
   width: 35vw;
   font-size: 1.18rem;
@@ -592,7 +604,8 @@ nav ul li:hover {
   text-transform: uppercase;
   width: 30vw;
   color: white;
-  font-family: "Fragment Mono ", monospace;
+  font-family: "Inter", sans-serif;
+
   font-size: 3.5rem;
   font-weight: 300;
   /* border: 1px solid white; */
@@ -601,7 +614,10 @@ nav ul li:hover {
 }
 .second-line p {
   color: #c7c7c7;
-  font-family: "Oxygen Mono", monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 2vw;
+  font-weight: 300;
+
   margin-top: 2.3vw;
   text-align: right;
   /* border: 1px solid white; */
@@ -641,7 +657,8 @@ nav ul li:hover {
 }
 #contact .title h1 {
   font-size: 5.5rem;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Outfit", sans-serif;
+
   font-style: italic;
   color: white;
   text-transform: uppercase;
@@ -656,7 +673,8 @@ nav ul li:hover {
   font-size: 4rem;
   text-transform: uppercase;
   color: white;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.2vw;
   transform: rotate(-90deg);
   font-style: italic;
   font-weight: 200;
@@ -668,7 +686,7 @@ nav ul li:hover {
   gap: 2vw;
   font-size: 2rem;
   color: white;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: italic;
   border: 1.5px solid #e7e6e6;
@@ -684,12 +702,12 @@ nav ul li:hover {
   border-radius: 10px;
 }
 #contact .content .card .link a {
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   color: white;
 }
 #contact .content .card .link a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 #contact .cards {
   display: flex;
@@ -700,7 +718,8 @@ nav ul li:hover {
 footer {
   margin-top: 8vw;
   color: gray;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Outfit", sans-serif;
+
   text-align: center;
   text-transform: uppercase;
 }

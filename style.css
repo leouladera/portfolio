@@ -38,6 +38,21 @@ nav ul {
   backdrop-filter: blur(10px);
   list-style-type: none;
   box-shadow: 0px 8px 10px -8px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  animation: from-top 1.5s ease-in-out 0.2s 1 forwards;
+}
+@keyframes from-top {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 nav ul li a {
   color: white;
@@ -70,6 +85,22 @@ nav ul li:hover {
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 31px rgba(255, 255, 255, 0.195);
+  animation: from-top1 1.5s ease-in-out 0.6s 1 forwards;
+  opacity: 0;
+}
+@keyframes from-top1 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 #hero h1 span {
   font-family: "Outfit", sans-serif;
@@ -86,6 +117,22 @@ nav ul li:hover {
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   margin-top: 0.2vw;
+  animation: from-left1 1.5s ease-in-out 0.8s 1 forwards;
+  opacity: 0;
+}
+@keyframes from-left1 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 #hero h2 span {
   font-weight: bold;
@@ -103,16 +150,33 @@ nav ul li:hover {
 }
 #hero .info .social {
   display: flex;
-  gap: 2.5rem;
+  gap: clamp(1rem, 2.5rem, 3rem);
   color: rgb(255, 255, 255);
   font-size: 3.5rem;
   border: 2px solid rgba(255, 255, 255, 0.362);
   border-radius: 14px;
   padding-inline: 38px;
   padding-block: 4px;
-  margin-right: 15vw;
+  margin-right: clamp(0vw, 20vw, 20vw);
   margin-left: 5vw;
   height: fit-content;
+  animation: from-left2 1.5s ease-in-out 0.6s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes from-left2 {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 #hero .info .social p a i {
   height: fit-content;
@@ -124,7 +188,7 @@ nav ul li:hover {
   transform: scale(1.1);
 }
 #hero .info .paragraph {
-  max-width: 45vw;
+  width: 45vw;
   font-size: 1.2em;
   text-align: right;
   color: #f3f3f3;
@@ -133,6 +197,23 @@ nav ul li:hover {
   font-optical-sizing: auto;
   line-height: 1.5em;
   letter-spacing: 1px;
+  animation: from-right1 1.5s ease-in-out 0.5s 1 forwards;
+  opacity: 0;
+  margin-right: clamp(0vw, 5vw, 6vw);
+}
+@keyframes from-right1 {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 #hero .button {
   text-align: center;
@@ -148,6 +229,22 @@ nav ul li:hover {
   border: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  animation: from-bottom 1.5s ease-in-out 0.6s 1 forwards;
+  opacity: 0;
+}
+@keyframes from-bottom {
+  0% {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 #hero .button button span {
@@ -203,6 +300,7 @@ nav ul li:hover {
   letter-spacing: 1px;
   line-height: 1.6vw;
   font-weight: 450;
+  margin-inline: auto;
 }
 .intro .see-more {
   text-align: center;
@@ -311,7 +409,7 @@ nav ul li:hover {
   font-size: 1.1rem;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  max-width: 23vw;
+  max-width: clamp(30vw, 23vw, 18vw);
   color: #5a5a5a;
   margin-top: 1vw;
   text-transform: capitalize;
@@ -723,12 +821,76 @@ nav ul li:hover {
   /* margin-top: 1vw; */
 }
 footer {
-  margin-top: 8vw;
+  margin-top: 9vw;
   color: gray;
   font-family: "Outfit", sans-serif;
 
   text-align: center;
   text-transform: uppercase;
+}
+.quote {
+  padding-inline: 4vw;
+  margin-top: 8vw;
+}
+.quote h2 {
+  font-size: 4rem;
+  font-style: italic;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 28px rgba(255, 255, 255, 0.392);
+}
+.quote span {
+  color: white;
+  font-size: 5rem;
+  /* border: 1px solid white; */
+  height: 0vw;
+}
+.quote #quote-content {
+  color: white;
+  text-transform: capitalize;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.8rem;
+  /* margin-top: 1vw; */
+  font-style: oblique;
+  max-width: 70vw;
+  font-weight: 200;
+}
+.quote #author {
+  color: rgb(191, 191, 191);
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  /* margin-top: 1vw; */
+  font-size: 1.3rem;
+}
+.quote #btn {
+  border: none;
+  padding-inline: 1.5vw;
+  padding-block: 0.8vw;
+  font-size: 1.3rem;
+  /* color: rgb(255, 255, 255); */
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 2vw;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+.quote #btn:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: white;
+  box-shadow: 0px 4px 30px -2px rgba(255, 255, 255, 0.14);
+}
+.quote #btn:focus {
+  transform: scale(1.1);
+  color: black;
+  background-color: white;
+  box-shadow: 0px 4px 30px -2px rgba(255, 255, 255, 0.14);
 }
 @media (min-width: 320px) and (max-width: 768px) {
   * {
@@ -736,10 +898,13 @@ footer {
   }
   nav ul {
     background-color: #3c3c3cdc;
-
-    margin-top: 1vw;
+    gap: 3vw;
+    margin-top: 2vw;
     padding-block: 4vw;
     padding-inline: 8vw;
+  }
+  nav ul li a {
+    font-size: 1rem;
   }
   #hero h1 {
     font-size: 6rem;
@@ -1010,5 +1175,45 @@ footer {
   }
   #contact .content .card .line {
     height: 9vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul {
+    background-color: #3c3c3cdc;
+    margin-top: 2vw;
+    padding-block: 2vw;
+    padding-inline: 6vw;
+  }
+  #hero .info .social {
+    margin-right: clamp(0vw, 5vw, 15vw);
+  }
+  #hero .info .paragraph {
+    margin-right: clamp(0vw, 0vw, 5vw);
+  }
+  .intro .content .line {
+    width: 1px;
+    height: 30vw;
+    background-color: #7a7a7a9f;
+    border-radius: 10px;
+  }
+  .intro .content .first h1 {
+    max-width: 35vw;
+  }
+  .intro .content .first p {
+    max-width: 45vw;
+    line-height: 3vw;
+    margin-inline: auto;
+  }
+  #interest {
+    width: 98%;
+    margin-inline: auto;
+  }
+  #interest .lists {
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+  }
+  #interest .lists p {
+    line-height: 3vw;
   }
 }

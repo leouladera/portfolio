@@ -606,15 +606,23 @@ nav ul li:hover {
   transform: scale(1.05);
 }
 .third-button {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-top: 10vw;
+}
+.third-button a {
+  /* text-align: center; */
   font-size: 1.3rem;
-  color: #8b8b8b;
+  color: #848484ea;
   font-family: "Roboto", serif;
   text-transform: lowercase;
   font-weight: 300;
-  text-decoration: underline;
+  text-decoration: underline #212121;
   cursor: pointer;
+  transition: 0.05s ease-in-out;
+}
+.third-button a:hover {
+  text-decoration: underline #727272;
 }
 #awards {
   scroll-margin-top: 7vw;
@@ -640,7 +648,7 @@ nav ul li:hover {
   align-items: center;
   padding-right: 5vw;
   padding-left: 4vw;
-  margin-top: 10vw;
+  margin-top: 3vw;
   /* border: 1px solid white; */
 }
 .lines-2 {

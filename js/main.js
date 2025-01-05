@@ -38,3 +38,5 @@ document.getElementById("btn").addEventListener("click", fetchQuote);
 
 // Fetch a quote on initial load
 fetchQuote();
+const currentYear = new Date().getFullYear();
+document.getElementById("current-year").textContent = currentYear;

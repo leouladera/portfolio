@@ -525,26 +525,27 @@ nav ul li:hover {
   font-style: italic;
   font-weight: 300;
 }
-.projects {
+#projects {
   padding-inline: 10vw;
   padding-top: 5vw;
+  /* scroll-margin-top: 18vw; */
 }
-.projects .card {
+#projects .card {
   border: 2px solid #909090;
   border-radius: 25px;
   width: fit-content;
   padding: 1vw;
 }
-.projects .cards {
+#projects .cards {
   display: flex;
   justify-content: space-between;
 }
-.projects img {
+#projects img {
   border-radius: 14px;
   width: 30vw;
   border: 1px solid rgba(128, 128, 128, 0.129);
 }
-.projects h1 {
+#projects h1 {
   font-size: 2.5rem;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -554,7 +555,7 @@ nav ul li:hover {
   margin-top: 1vw;
   text-transform: uppercase;
 }
-.projects p {
+#projects p {
   width: 30vw;
   font-size: 1.1rem;
   color: #bdbdbd;
@@ -562,26 +563,26 @@ nav ul li:hover {
   text-transform: capitalize;
   margin-top: 1vw;
 }
-.projects .buttons {
+#projects .buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 2.5vw;
   margin-bottom: 1vw;
   padding-inline: 1vw;
 }
-.projects .buttons .logo {
+#projects .buttons .logo {
   color: white;
   cursor: pointer;
   font-size: 2rem;
   transition: 0.2s;
 }
-.projects .buttons .logo a {
+#projects .buttons .logo a {
   color: white;
 }
-.projects .buttons .logo:hover {
+#projects .buttons .logo:hover {
   transform: scale(1.09);
 }
-.projects .buttons .button button {
+#projects .buttons .button button {
   background-color: white;
   padding-inline: 1vw;
   padding-block: 0.5vw;
@@ -597,11 +598,11 @@ nav ul li:hover {
   transition: 0.3s;
   border: none;
 }
-.projects .buttons .button button a {
+#projects .buttons .button button a {
   color: black;
   text-decoration: none;
 }
-.projects .buttons .button button:hover {
+#projects .buttons .button button:hover {
   box-shadow: 0px 4px 35px 1px rgba(255, 255, 255, 0.296);
   transform: scale(1.05);
 }
@@ -1063,34 +1064,34 @@ footer {
     font-size: 2.5rem;
     margin-right: 2vw;
   }
-  .projects {
+  #projects {
     padding-inline: 5vw;
     padding-top: 5vw;
   }
-  .projects .card {
+  #projects .card {
     border: 2px solid #909090;
     border-radius: 25px;
     width: fit-content;
     padding: 4vw;
   }
-  .projects .cards {
+  #projects .cards {
     display: flex;
     flex-direction: column;
     gap: 6vw;
   }
-  .projects img {
+  #projects img {
     border-radius: 14px;
     width: 100%;
     border: 1px solid rgba(128, 128, 128, 0.129);
   }
-  .projects h1 {
+  #projects h1 {
     font-size: 1.5rem;
     width: 100%;
   }
-  .projects p {
+  #projects p {
     width: 100%;
   }
-  .projects .buttons .button button {
+  #projects .buttons .button button {
     box-shadow: 0px 4px 90px -1px rgba(255, 255, 255, 0.184);
     padding-inline: 4vw;
     font-size: 1.2rem;

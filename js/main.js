@@ -40,3 +40,9 @@ document.getElementById("btn").addEventListener("click", fetchQuote);
 fetchQuote();
 const currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = currentYear;
+// Dark mode
+const mode = document.getElementById("toggle-mode");
+const body = document.body;
+mode.addEventListener("click", () => {
+  body.classList.toggle("light-mode");
+});

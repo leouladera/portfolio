@@ -1108,8 +1108,7 @@ footer {
     position: absolute;
     gap: 0.1rem;
     right: 2%;
-    top: 10%;
-    flex-direction: column;
+    top: 9%;
   }
   nav #toggle-mode {
     position: relative;
@@ -1117,10 +1116,15 @@ footer {
     cursor: pointer;
     /* color: var(--toggle-color); */
     border: 1px solid var(--toggle-border-color);
-    padding: 34px 15px;
+    padding: 32px 15px;
     border-radius: 20px;
   }
-
+  nav .toggle-switch .lgt {
+    display: none;
+  }
+  nav .toggle-switch .dark {
+    display: none;
+  }
   nav ul {
     background-color: var(--nav-background-color);
     gap: 3vw;

@@ -15,7 +15,9 @@
   --circle-top: 14%;
   --circle-left: 7%;
   --circle-light-display: none;
-  --toggle-background-color: #2c2c2cdb;
+  --toggle-text-drk-color: #f3f3f3;
+  --toggle-text-lgt-display: none;
+  --toggle-background-color: #2c2c2cd2;
   --toggle-border-color: #6f6f6f2d;
   --background-color-drk: #212121;
   --background-color-lgt: #f9f9f9;
@@ -25,9 +27,9 @@
   --selection-background-color: #ededed;
   --selection-color: rgb(19, 19, 19);
   --nav-background-color: #3c3c3cef;
-  --nav-border-top-color: #cfcfcf42;
+  --nav-border-top-color: #cfcfcf35;
   --nav-border-bottom-color: #cfcfcf00;
-  --nav-border-side-color: #69696942;
+  --nav-border-side-color: #69696922;
   --nav-shadow-color: rgba(0, 0, 0, 0.25);
   --nav-a-color: white;
   --hero-h1-gradient-start: #ffffff;
@@ -115,9 +117,12 @@ body {
   --circle-left: 58%;
   --circle-dark-display: none;
   --circle-light-display: ;
+  --toggle-text-drk-display: none;
+  --toggle-text-lgt-display: display;
+  --toggle-text-lgt-color: #191919;
   --toggle-border-color: rgba(210, 210, 210, 0.525);
-  --toggle-background-color: #f9f9f9e3;
-  --toggle-box-shadow: rgba(109, 109, 109, 0.342);
+  --toggle-background-color: #f9f9f920;
+  --toggle-box-shadow: rgba(130, 130, 130, 0.24);
   --inner-circle-background-color: #e7e7e7;
   background-color: var(--background-color-lgt);
   --selection-background-color: #1e1e1e;
@@ -288,6 +293,39 @@ nav .toggle-switch {
   align-items: center; */
   /* gap: 0.5em; */
   color: var(--daynight-color);
+}
+
+nav .toggle-switch .dark-txt {
+  margin-top: 1em;
+  color: var(--toggle-text-drk-color);
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  text-align: center;
+  display: var(--toggle-text-drk-display);
+  animation: fade 3s ease-in-out 0s 1 forwards;
+}
+nav .toggle-switch .lgt-txt {
+  margin-top: 0.5em;
+  color: var(--toggle-text-lgt-color);
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  text-align: center;
+  display: var(--toggle-text-lgt-display);
+  opacity: 0;
+  animation: fade 3s ease-in-out 0s 1 forwards;
+}
+
+@keyframes fade {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
 }
 nav #toggle-mode {
   position: relative;
@@ -1139,9 +1177,18 @@ footer {
     font-size: 1.5rem;
     cursor: pointer;
     /* color: var(--toggle-color); */
-    border: 1px solid var(--toggle-border-color);
-    padding: 32px 15px;
+    border: none;
+    display: flex;
+    place-items: center;
+    padding: 15px;
     border-radius: 20px;
+    background-color: none;
+  }
+  nav .toggle-switch .dark-txt {
+    display: none;
+  }
+  nav .toggle-switch .lgt-txt {
+    display: none;
   }
   .inner-circle {
     top: var(--circle-top);
@@ -1149,21 +1196,21 @@ footer {
     position: absolute;
     border-radius: 50%;
     padding: 0px 2px;
-    background-color: var(--toggle-border-color);
+    background-color: transparent;
   }
   .inner-circle .dark {
     /* padding: 200px 6px; */
     font-size: 1rem;
-    padding-block: 4px;
-    padding-inline: 5px;
+    padding-block: 5px;
+    padding-inline: 7.5px;
     /* height: fit-content;  */
     color: var(--night-color);
     display: var(--circle-dark-display);
   }
   .inner-circle .lgt {
     font-size: 1rem;
-    padding-block: 5.2px;
-    padding-inline: 2.5px;
+    padding-block: 5px;
+    padding-inline: 4px;
     /* height: fit-content;  */
     color: var(--day-color);
     display: var(--circle-light-display);
@@ -1191,9 +1238,14 @@ footer {
     color: transparent;
     text-shadow: 0 0 31px var(--hero-h1-shadow);
   }
+  :root {
+    --circle-top: 0%;
+    --circle-left: 0%;
+  }
   .light-mode {
-    --circle-top: 52%;
-    --circle-left: 8%;
+    --circle-top: 0%;
+    --circle-left: 0%;
+    --toggle-background-color: #dadada8e;
   }
   #hero .info {
     display: flex;
@@ -1455,7 +1507,7 @@ footer {
     width: 100%;
     /* margin-inline: auto; */
     /* padding-left: 7vw; */
-    padding-inline: 17vw;
+    padding-inline: 2vw;
     border-radius: 8px;
     padding-block: 1vw;
   }

@@ -14,6 +14,7 @@
   --night-color: #815df6;
   --circle-top: 11%;
   --circle-left: 5%;
+  --circle-light-display: none;
   --toggle-background-color: #272727b0;
   --toggle-border-color: #ffffff;
   --background-color-drk: #212121;
@@ -106,11 +107,13 @@ body {
   background-color: var(--background-color-drk);
 }
 .light-mode {
-  --day-color: rgb(221, 210, 5);
+  --day-color: #ffff00;
   --night-color: rgb(199, 157, 250);
-  --circle-top: 11%;
-  --circle-left: 58%;
-  --toggle-border-color: #0e0e0e;
+  --circle-top: 6%;
+  --circle-left: 46%;
+  --circle-dark-display: none;
+  --circle-light-display: ;
+  --toggle-border-color: rgb(59, 59, 59);
   --toggle-background-color: #f9f9f9e3;
 
   background-color: var(--background-color-lgt);
@@ -268,29 +271,29 @@ nav button {
   font-size: 1em;
   border-radius: 5px;
 }
-nav .toggle-switch .lgt {
+/* nav .toggle-switch .lgt {
   color: var(--day-color);
 }
 nav .toggle-switch .dark {
   color: rgb(199, 157, 250);
-}
+} */
 nav .toggle-switch {
   position: absolute;
   right: 4%;
   top: 30%;
-  display: flex;
-  align-items: center;
-  font-size: 1.7rem;
-  gap: 0.5em;
+  /* display: flex;
+  align-items: center; */
+
+  /* gap: 0.5em; */
   color: var(--daynight-color);
 }
 nav #toggle-mode {
   position: relative;
-  font-size: 1.5rem;
+  /* font-size: 0.1rem; */
   cursor: pointer;
   /* color: var(--toggle-color); */
   border: 1px solid var(--toggle-border-color);
-  padding: 16px 33px;
+  padding: 14px 25px;
   border-radius: 20px;
   backdrop-filter: blur(7px);
 
@@ -300,9 +303,29 @@ nav #toggle-mode {
   top: var(--circle-top);
   left: var(--circle-left);
   position: absolute;
-  padding: 13px;
   border-radius: 50%;
+  /* padding: 0px 2px; */
+  display: flex;
+  align-items: center;
   background-color: var(--toggle-border-color);
+  box-shadow: 0px 0px 10px -9px var(--toggle-border-color);
+}
+.inner-circle .dark {
+  /* padding: 200px 6px; */
+  font-size: 1rem;
+  padding-block: 2px;
+  padding-inline: 6px;
+  /* height: fit-content;  */
+  color: var(--night-color);
+  display: var(--circle-dark-display);
+}
+.inner-circle .lgt {
+  font-size: 0.98rem;
+  padding-block: 3.5px;
+  padding-inline: 4.7px;
+  /* height: fit-content;  */
+  color: var(--day-color);
+  display: var(--circle-light-display);
 }
 
 #hero {
@@ -1107,7 +1130,7 @@ footer {
   nav .toggle-switch {
     position: absolute;
     gap: 0.1rem;
-    right: 2%;
+    right: 1%;
     top: 9%;
   }
   nav #toggle-mode {
@@ -1119,11 +1142,30 @@ footer {
     padding: 32px 15px;
     border-radius: 20px;
   }
-  nav .toggle-switch .lgt {
-    display: none;
+  .inner-circle {
+    top: var(--circle-top);
+    left: var(--circle-left);
+    position: absolute;
+    border-radius: 50%;
+    padding: 0px 2px;
+    background-color: var(--toggle-border-color);
   }
-  nav .toggle-switch .dark {
-    display: none;
+  .inner-circle .dark {
+    /* padding: 200px 6px; */
+    font-size: 1rem;
+    padding-block: 4px;
+    padding-inline: 5px;
+    /* height: fit-content;  */
+    color: var(--night-color);
+    display: var(--circle-dark-display);
+  }
+  .inner-circle .lgt {
+    font-size: 1rem;
+    padding-block: 5.2px;
+    padding-inline: 2.5px;
+    /* height: fit-content;  */
+    color: var(--day-color);
+    display: var(--circle-light-display);
   }
   nav ul {
     background-color: var(--nav-background-color);
@@ -1131,6 +1173,7 @@ footer {
     margin-top: 2vw;
     padding-block: 4vw;
     padding-inline: 8vw;
+    margin-right: 2px;
   }
   nav ul li a {
     font-size: 1rem;

@@ -1187,7 +1187,7 @@ footer {
     border-radius: 50%;
     background-color: none;
     opacity: 0;
-    animation: right 2s ease-in-out 0.5s 1 forwards;
+    animation: right 2.4s ease-in-out 1.5s 1 forwards;
   }
   @keyframes right {
     0% {
@@ -1195,7 +1195,7 @@ footer {
       opacity: 0;
     }
     50% {
-      transform: translate(-10px);
+      transform: translate(-8px);
     }
     100% {
       transform: translate(0px);
@@ -1286,7 +1286,7 @@ footer {
     min-width: 100%;
   }
   #hero .info .social {
-    margin-top: 6vw;
+    /* margin-top: 6vw; */
     gap: 2rem;
   }
   #hero .info .social {
@@ -1299,7 +1299,7 @@ footer {
     /* border-radius: 8px; */
   }
   #hero .info .social p a i {
-    height: 10vw;
+    /* height: 10vw; */
     transition: 0.3s;
     cursor: pointer;
     color: var(--social-color);

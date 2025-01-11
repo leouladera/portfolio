@@ -58,6 +58,7 @@
   --about-h1-color: white;
   --about-h1-shadow-color: rgba(255, 255, 255, 0.159);
   --about-p-color: #f3f3f3;
+  --circle-text-color: #ffffff;
   --interest-background-color: white;
   --interest-shadow-color: rgba(255, 255, 255, 0.819);
   --interest-h1-color: #101010;
@@ -158,6 +159,7 @@ body {
   --about-h1-color: #181818;
   --about-h1-shadow-color: rgba(0, 0, 0, 0.159);
   --about-p-color: #232323;
+  --circle-text-color: #0e0e0e;
   --interest-background-color: #181818;
   --interest-color: white;
   --interest-shadow-color: rgba(0, 0, 0, 0.096);
@@ -644,6 +646,47 @@ nav #toggle-mode {
   padding-inline: 10vw;
   scroll-margin-top: 8vw;
 }
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 5vw;
+  /* margin-top: 10vw; */
+}
+
+.circle-text {
+  fill: var(--circle-text-color);
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.203);
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+circle {
+  stroke: rgba(86, 86, 86, 0.681);
+}
+/* .image image:hover,
+circle:hover {
+  transform: scale(1.01);
+  stroke-width: 0px;
+  x: 64;
+  y: 64;
+} */
+
+.rotating-text {
+  animation: rotateText 43s ease-in-out infinite;
+}
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+
 #about h1 {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -1354,6 +1397,7 @@ footer {
 
   #about {
     padding-inline: 4vw;
+    margin-inline: auto;
     scroll-margin-top: 8vw;
   }
   #about h1 {
@@ -1363,6 +1407,17 @@ footer {
   #about p {
     min-width: 100%;
     text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 5vw;
+    /* margin-top: 10vw; */
+  }
+  .image {
+    margin-inline: auto;
   }
   #interest {
     flex-wrap: wrap;

@@ -27,9 +27,9 @@
   --selection-background-color: #ededed;
   --selection-color: rgb(19, 19, 19);
   --nav-background-color: #3c3c3cef;
-  --nav-border-top-color: #cfcfcf35;
+  --nav-border-top-color: #cfcfcf27;
   --nav-border-bottom-color: #cfcfcf00;
-  --nav-border-side-color: #69696922;
+  --nav-border-side-color: #6969692e;
   --nav-shadow-color: rgba(0, 0, 0, 0.25);
   --nav-a-color: white;
   --hero-h1-gradient-start: #ffffff;
@@ -226,16 +226,16 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 2vw;
+  gap: 2.2vw;
   justify-content: space-around;
   margin-top: 1rem;
   background-color: var(--nav-background-color);
-  padding-block: 1vw;
+  padding-block: 0.8vw;
   width: fit-content;
   padding-inline: 3.5vw;
   /* margin-inline: 115%; */
-  border-radius: 13px;
-  border-top: 1px solid var(--nav-border-top-color);
+  border-radius: 9px;
+  border-top: 0.1px solid var(--nav-border-top-color);
   border-bottom: 1px solid var(--nav-border-bottom-color);
   border-left: 0.1px solid var(--nav-border-side-color);
   border-right: 0.1px solid var(--nav-border-side-color);

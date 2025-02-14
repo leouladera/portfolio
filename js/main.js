@@ -41,8 +41,26 @@ fetchQuote();
 const currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = currentYear;
 // Dark mode
-const mode = document.getElementById("toggle-mode");
-const body = document.body;
-mode.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
+// const mode = document.getElementById("toggle-mode");
+// const body = document.body;
+// mode.addEventListener("click", () => {
+//   body.classList.toggle("light-mode");
+// });
+const toggleSwitch = document.getElementById("toggle-mode");
+
+// Function to apply the theme
+function applySystemTheme() {
+  const prefersLight = window.matchMedia(
+    "(prefers-color-scheme: light)"
+  ).matches;
+  if (prefersLight) {
+    document.body.classList.add("light-mode");
+  } else {
+    document.body.classList.remove("light-mode");
+  }
+}
+applySystemTheme();
+
+toggleSwitch.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
 });

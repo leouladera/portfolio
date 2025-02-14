@@ -9,6 +9,10 @@
 
   /* overflow-x: hidden; */
 }
+:root.dark {
+  color-scheme: light dark;
+}
+
 :root {
   --day-color: #fce700;
   --night-color: #815df6;
@@ -108,10 +112,13 @@
   --quote-btn-hover-color: black;
   --quote-btn-hover-shadow-color: rgba(255, 255, 255, 0.14);
 }
+
 body {
   background-color: var(--background-color-drk);
 }
+
 .light-mode {
+  color-scheme: light;
   --day-color: #434343;
   --night-color: rgb(199, 157, 250);
   --circle-top: 10%;
@@ -211,6 +218,7 @@ body {
   --quote-btn-hover-color: white;
   --quote-btn-hover-shadow-color: rgba(255, 255, 255, 0);
 }
+
 ::selection {
   background-color: var(--selection-background-color);
   color: var(--selection-color);

@@ -466,7 +466,7 @@ nav #toggle-mode {
   display: flex;
   gap: clamp(1rem, 2rem, 3rem);
   color: var(--social-color);
-  font-size: 2.5rem;
+  font-size: 2rem;
   /* border: 2px solid var(--social-border-color); */
   /* border-radius: 14px; */
   /* padding-inline: 2.5rem; */
@@ -601,9 +601,10 @@ nav #toggle-mode {
   color: var(--intro-h1-color);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-size: 3rem;
-  max-width: 15vw;
-  font-weight: 300;
+  font-size: 2.8rem;
+  max-width: 20vw;
+  font-weight: 500;
+  text-transform: capitalize;
   letter-spacing: 0.01em;
 }
 .intro .content .first p {
@@ -763,6 +764,12 @@ circle:hover {
   text-transform: uppercase;
   color: var(--interest-li-color);
 }
+.icon {
+  display: inline;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
 
 #interest .lists p {
   font-size: 1.1rem;
@@ -872,6 +879,7 @@ circle:hover {
   margin-top: 2.5vw;
   margin-bottom: 1vw;
   padding-inline: 1vw;
+  align-items: center;
 }
 #projects .buttons .logo a {
   cursor: pointer;
@@ -891,7 +899,7 @@ circle:hover {
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
-  text-transform: uppercase;
+  text-transform: capitalize;
   box-shadow: 0px 4px 30px 1px var(--project-button-shadow-color);
   font-size: 1.1rem;
   font-weight: 400;
@@ -910,6 +918,7 @@ circle:hover {
 }
 .third-button {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 10vw;
 }
